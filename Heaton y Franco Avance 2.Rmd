@@ -1,0 +1,391 @@
+---
+title: "Avance 2 Heaton y Franco"
+author: "Vanessa Franco20190635"
+date: "1/11/2021"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax
+for authoring HTML, PDF, and MS Word documents. For more details on
+using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that
+includes both content as well as the output of any embedded R code
+chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+library(rio)
+library(readxl)
+Base_de_datos <- read_excel("Base de datos.xlsx")
+```
+
+1.  **Pregunta**
+
+    *¿Cuál es la relación entre el autoritarismo, nivel de desarrollo e
+    inestabilidad política con la desigualdad de género?*
+
+2.  **Posibles hipótesis**
+
+    Estados con un bajo nivel de desarrollo humano con regímenes más
+    autoritarios y en constante inestabilidad política presentan un alto
+    índice de desigualdad de género.
+
+    --------------------------------------------------------
+
+3.  **Introducción**
+
+    La desigualdad de género es un problema latente aún en pleno
+    siglo XXI. El informe "The Global Gender Gap Index 2020", de World
+    Economic Forum, reveló que aún faltarían 199.5 años para que el
+    mundo sea una sociedad más paritaria. Asimismo, se puede evidenciar
+    que la búsqueda por cerrar estas brechas se da de manera homogénea
+    en el globo terráqueo, y por tanto, muchos grupos de mujeres -en la
+    actualidad- aún se ven en situaciones de desventaja a comparación de
+    los hombres.
+
+Sin duda, existen muchos factores que se relacionan con la desigualdad
+de género, por ejemplo: factores culturales o religiosos, económicos o
+sociales; empero, en el presente trabajo queremos centrarnos en la
+investigación de factores políticos. Por ello, buscamos averiguar la
+relación entre desigualdad de género y regímenes políticos no
+democráticos. En ese sentido, nuestra idea es que aquellos países que
+poseen una política inestable (constantes crisis políticas, conflictos
+armados, etc.), con bajos niveles de desarrollo humano y poca cultura
+democrática van a tender a relegar y subordinar a las mujeres en sus
+sociedades. En consiguiente, podríamos decir que aquellas sociedades con
+carácteres autoritarios y bajos niveles desarrollo (ejem: países de
+Medio Oriente y África) no tienen como prioridad próxima las
+disparidades entre los ciudadanos y ciudadanas de sus Estados.
+
+La relevancia de la investigación sobre esta problemática radica en la
+urgencia de identificar condiciones de riesgo sobre los derechos de las
+mujeres, los cuales aún no están garantizados en todos los países del
+mundo. De esta manera, consideramos que determinados tipos de gobiernos
+son más propensos a desarrollar actitudes y prácticas que atenten los
+derechos y socaven los avances de igualdad de género en el mundo. Por
+ello, es importante identificar qué escenarios políticos dan pie a una
+mayor vulneración para que, de esta manera, se pueda tomar consciencia y
+tomar las acciones necesarias para hacer frente a esta problemática.
+
+En relación a ello, el objetivo general del presente reporte es poder
+identificar bajo qué escenarios y contextos sociopolíticos, la igualdad
+de género se ve más o menos perjudicada. De esta manera, a partir del
+análisis estadístico podremos verificar si efectivamente un país bajo un
+regimen autoritario, con constante inestabilidad política y un bajo
+índice de desarrollo humano, tendrá un nivel de desigualdad alto, o por
+el contrario, comprobar que estas variables realmente no influyen en las
+condiciones en las que una mujer puede vivir. Bajo esta línea, se busca
+además identificar si el tipo de régimen político afecta al proyecto de
+vida de una mujer (pues es más susceptible a permitir a que se
+desarrolle una desigualdad entre hombres y mujeres, colocando a estas
+últimas en desventaja). Por otro lado, se tiene como objetivo
+identificar si las constantes crisis políticas y socio-económicas que
+llevan a un estado de inestabilidad en el país, son causantes de generr
+altos índices de desigualdad de género, lo cual nos ayudaría a comprobar
+que la inestabiidad política puede afectar de una manera distinta a los
+ciudadanos según su género. Por último, se busca plantear escenarios
+favorables para que las mujeres puedan desarrollarse y no tenga porqué
+vivir bajo un sistema desigual que las coloca en desventaja sobre los
+hombres, de esta manera se tiene la intención de apuntar a sociedad con
+igualdad de oportunidades y derechos para todas y todos.
+
+------------------------------------
+
+4.  **Revisión de literatura**
+
+    Según un informe de la BBC Mundo (2016), las regiones del mundo
+    donde se pueden evidenciar los mayores índices de desigualdad de
+    género son las zonas de Asia Meridional, África Sub-sahariana y del
+    Norte, Oriente Medio y América Latina y el Caribe. Empero, los
+    niveles de este tipo de disparidad al mismo tiempo varían
+    dependiendo del país y del tipo de Estado en el que una mujer
+    habita. De hecho, muchos autores concuerdan que los regímenes
+    democráticos tienden a poseer mayores grados de igualdad entre
+    mujeres y hombres puesto que dentro de sus valores y principios se
+    tiene muy presente el tema de la "igualdad". Asimismo, la concepción
+    de igualdad entre ciudadanos termina siendo un signo de una buena
+    calidad de democracia, por tanto, este tipo de regímenes tiene como
+    sus principales objetivos velar por el cierre de brechas sociales de
+    todo tipo (Sahui, 2015).
+
+Si bien a finales del siglo XX, con la tercera ola democratizadora,
+muchos Estados dan una transición a esta forma de gobierno; hubieron
+algunos países que decidieron prescindir de este cambio y mantener los
+regímenes autoritarios o dictatoriales ya instalados (Mukhopadhyay,
+2007). La cuestión es que este segundo tipo de regímenes políticos,
+causa gran preocupación a nivel académico y social, debido a que se
+caracteriza por la violencia, coerción, privación de la libertad, de
+derechos humanos y poseer poca participación ciudadana debido a la
+relación tan vertical y alejada entre Estado-ciudadano. Ergo, es casi
+imposible pensar que en este tipo de Estados se busca velar realmente
+por la integridad de sus habitantes. Por el contrario, aquel agente que
+debería de brindar seguridad y oportunidades (Estado) se vuelve, en
+muchos casos, el peor enemigo del ciudadano.
+
+Ahora bien, uniendo el tema de desigualdad de género y regímenes
+autoritarios, investigadoras como Caprioli (2000) consideran que existe
+una correlación entre desigualdad de género con Estados que poseen las
+siguientes características: bajos niveles de paz internacional, es
+decir: se encuentran en constantes conflictos bélicos o diplomáticos;
+malas relaciones con sus países vecinos; y poco cumplidores con las
+normas/leyes establecidos en los tratados internacionales que han
+firmado. Asimismo, autoras como Wood y Martinez (2018) destacan que
+existe una fuerte relación entre las actitudes estatales frente a la
+violencia y el nivel de igualdad de género; y aquellos regímenes que
+tienden, en la mayoría de los casos, a buscar soluciones violentas para
+los conflictos domésticos o internacionales, son los autoritarios. Por
+otro lado, en cuanto estabilidad política o estatal, Bowen y Nielsen
+(2020), consideran que los países que poseen menores ciclos de crisis
+políticas, económicas o sociales y que poseen tanto bastante
+institucionalidad y legitimidad en la población, son aquellos Estados
+que generan mejores condiciones de vida/calidad de vida pues poseen
+tanto el contexto como las condiciones para velar por cerrar brechas y
+brindar prosperidad para sus ciudadanos y ciudadanas.
+
+No cabe duda que tanto en regímenes democráticos como autoritarios, los
+índices de desigualdad de género son persistentes aún en pleno siglo
+XXI. Como todos sabemos, la problemática de la exclusión de la mujer y
+su relegación al ámbito privado no es una cuestión reciente ni nueva.
+Históricamente las mujeres se han visto minimizadas y violentadas en
+varios aspectos de sus vidas gracias a las creencias y narrativas
+misóginas y patriarcales que las privan de desarrollo, libertades y
+derechos. Afortunadamente, gracias a los movimientos pro derechos de las
+mujeres (ejemplo: feminismo y sus distintas olas) hoy en día muchas de
+las barreras del pasado no se mantienen y se están haciendo muchos
+esfuerzos para minimizarlas. Empero, esto no quita que aún haya muchos
+retos y obstáculos que superar para que cada vez tengamos sociedades más
+paritarias.
+
+A lo largo del tiempo, se puede evidenciar que el tema de la mujer
+también ha ido cobrando relevancia a nivel internacional. Por ello, los
+Estados y los organismos internacionales han comenzado a tomar cartas en
+el asunto para generar mejoras respecto al tema. Si bien, a partir de
+los años noventa se puede observar un gran avance en el tema de
+desigualdad de género, ya desde 1930 se puede evidenciar los primeros
+intentos de creación de instancias regionales que velaban por la
+obtención de derechos políticos y civiles (derecho a voto y ciudadanía)
+para las mujeres latinoamericanas: la Comisión Interamericana de Mujeres
+de la OEA (Mones, 2004). Posteriormente, en la década de los sesenta,
+setentas y ochentas, a través del marco de la ONU, se comienza a
+priorizar la creación de medidas que comprometían a los Estados a
+acelerar el logro de derechos sociales y políticos de las mujeres. El
+resultado de estos intentos de búsqueda inclusión de la mujer a los
+campos en los que estuvo relegada por mucho tiempo, fueron: La
+Convención para la eliminación de todas las formas de discriminación
+contra la Mujer (1979), y la Convención Interamericana para Prevenir,
+Sancionar y Erradicar la Violencia contra la Mujer (1984).
+
+En la actualidad, la reducción de la violencia y desigualdades de
+género, siguen siendo uno de los principales puntos tanto de la agenda
+internacional -a decir verdad, es uno de los puntos principales de los
+Objetivos de Desarrollo Sostenible, 2030- como de las nacionales debido
+a que sigue siendo una de las problemáticas más latentes en todas las
+sociedades. Si bien existen muchas entidades internacionales, programas,
+tratados y organizaciones que brindan oportunidades a los Estados para
+buscar mejorar respecto a este tema; dependerá de cada uno aceptar
+dichas "ventanas de oportunidad" y ser constantes en la creación de
+políticas públicas que hagan a su país un lugar cada vez más justo e
+igualitario. Finalmente, por todo lo visto podríamos decir que algunos
+de los factores que podrían influenciar directamente con el grado de las
+disparidades de género serían el tipo de régimen estatal (democrático o
+autoritario); la atención que este le da a la defensa de derechos
+humanos y la buena calidad de vida; la estabilidad política o estatal y
+la forma en cómo estos enfrentan sus conflictos doméstico e
+internacionales; y la forma en cómo aprovechan las oportunidades
+internacionales que se dan para generar programas y políticas públicas
+que busquen erradicar la violencia y desigualdad de género.
+
+5.  **Análisis descriptivo**
+
+```{=html}
+<!-- -->
+```
+a.  [Variable dependiente: índice de desigualdad de género]{.ul}
+
+-Moda:
+
+A partir de los datos demostrados podemos señalar que el nivel de índice
+de desigualdad más común entre los países es el "medio" (en donde se
+encuentran todos los países con índices de desigualdad de entre 0.3 a
+0.6). Asimismo, el menos usual es el nivel "alto" pues sólo 15 países de
+la muestra han obtenido ese resultado.
+
+```{r}
+library(dplyr)
+
+Base_de_datos$desigualdadord= cut(Base_de_datos$Desigualdad, breaks = c(0, 0.3, 0.6, 1), include.lowest = T, ordered_result = T, labels = c("bajo", "medio", "alto"))
+
+table(Base_de_datos$desigualdadord)
+```
+
+-Gráfico
+
+A partir del presente gráfico de barras podemos confirmar lo mencionado
+anteriormente pues como se puede observar la mayoría de países tienen un
+nivel medio de desigualdad. Por el contrario, el nivel con menor
+proporción el de alto índice de desigualdad.
+
+```{r}
+plot(x = Base_de_datos$desigualdadord, main = "Niveles de índice de desigualdad",
+     xlab = "Nivel", ylab = "Frecuencia", 
+     col = c("royalblue", "seagreen", "purple", "red"))
+```
+
+b.  [Variable independiente: índice de desarrollo humano]{.ul}
+
+-Moda:
+
+A partir de los datos demostrados podemos señalar que la mayoría de los
+países han presentado un nivel de índice de desarrollo medio ( es decir,
+la mayor parte de los países presentan índices de entre 0.4 a 0.8). Por
+el contrario, el nivel menos común entre los países evaluados de índice
+de desarrollo humano es el bajo.
+
+```{r}
+library(dplyr)
+
+Base_de_datos$desarrolloord= cut(Base_de_datos$`Desarrollo humano`, breaks = c(0, 0.4, 0.8, 1), include.lowest = T, ordered_result = T, labels = c("bajo", "medio", "alto"))
+
+table(Base_de_datos$desarrolloord)
+```
+
+-Gráfico
+
+A partir del presente gráfico podemos visualizar lo que hemos mencionado
+con anterioridad. Por un lado, la mayor proporción de países se
+encuentran en un nivel medio de índice de desarrollo humano, mientra que
+la minoría de ellos han presentado un índice bajo de desarollo.
+
+```{r}
+plot(x = Base_de_datos$desarrolloord, main = "Niveles de índice de Desarrollo Humano",
+     xlab = "Nivel", ylab = "Frecuencia", 
+     col = c("royalblue", "seagreen", "purple", "red"))
+```
+
+[c.Variable independiente: inestabilidad política (escala del 1 al 5:
+valores más altos implica mayor inestabilidad)]{.ul}
+
+-Moda: De manera general podemos señalar que la mayoría de países tienen
+"algo" de inestabilidad política. Asimismo, del total de la muestra sólo
+9 países pueden ser catalogados con bastante inestabiidad política.
+
+```{r}
+library(dplyr)
+
+Base_de_datos$Inestabilidadord= cut(Base_de_datos$Inestabilidad, breaks = c(0, 1, 2, 3, 4, 5), include.lowest = T, ordered_result = T, labels = c("muy poca", "poca", "algo", "regular", "bastante"))
+
+table(Base_de_datos$Inestabilidadord)
+
+```
+
+-Gráfico Mediante este gráfico podemos confirmar lo mencionado
+anteriormente, el nivel de inestabilidad política más común entre los
+países es el de "algo" y el menos común es el de "bastante" (el nivel
+más alto).
+
+```{r}
+
+plot(x = Base_de_datos$Inestabilidadord, main = "Nivel de inestabilidad política",
+     xlab = "Nivel de inestabilidad", ylab = "Frecuencia", 
+     col = c("royalblue", "seagreen", "purple", "grey", "red"))
+
+```
+
+[d.Variable independiente: tipo de régimen (autocracia pura, autocracia
+inclusiva, autocracia liberal, democracia mínima)]{.ul}
+
+-Moda:
+
+A partir de los resultados se puede observar que el tipo de regimen más
+común es el de democracia mínima, asimismo encontramos 60 países con
+autoritarismos puros y el tipo menos común es el de autocracia
+inclusiva.
+
+```{r}
+str(Base_de_datos$Regimen)
+Base_de_datos$Regimen= factor(Base_de_datos$Regimen, labels = c("pura", "inclusiva", "liberal", "minima"))
+
+table(Base_de_datos$Regimen)
+```
+
+-Gráfico
+
+Como se puede observar, los dos regímenes más comunes son los de
+autocracias puras y democracias mínimas, mientras que el menos usual es
+el de autocracia inclusiva con solo 6 países.
+
+```{r}
+plot(x = Base_de_datos$Regimen, main = "Tipo de regimen",
+     xlab = "Tipo", ylab = "Frecuencia", 
+     col = c("royalblue", "seagreen", "purple", "red"))
+```
+
+6.  **Prueba:**
+
+    Para el presente trabajo proponemos utilizar la prueba de regresión
+    logísitica ordinal pues se adecúa al tipo de variable dependiente
+    con la que se va a a trabajar: categórica ordinal, la cual tiene más
+    de dos niveles (bajo-medio-alto) y va en un orden ascendente. Además
+    de ello, nos va a permitir comprobar nuestra hipótesis relacionada
+    al alto nivel de desigualdad de género según el tipo de régimen, el
+    índice de desarrollo humano y la inestabilidad política. De esta
+    manera, trabajar con un modelo logísitco ordinal será de gran
+    utilidad al momento de predecir si realmente nuestras variables
+    independientes afectan al nivel de desigualdad de género que
+    presenta un país y así, poder observar bajo qué escenarios y
+    contextos socio-políticos, la igualdad de género se ve más o menos
+    perjudicada.
+
+7.  **Bibliografía**
+
+Bibliografía: BBC Mundo (2016). Mariana Martinez: "Barómetro económico:
+la mujer y la desigualdad"
+<http://news.bbc.co.uk/hi/spanish/business/barometro_economico/newsid_4754000/4754380.stm>
+
+Caprioli, M (2000). "Gendered Conflict." Journal of Peace Research 37:
+51--68. ------. "Gender Equality and State Aggression: The Impact of
+Domestic Gender Equality on State First Use of Force." International
+Interactions 29, no. 3 (2003): 195--214.
+
+HUDSON, V. M., BOWEN, D. L., & NIELSEN, P. L. (2020). The First
+Political Order: How Sex Shapes Governance and National Security
+Worldwide. Columbia University Press.
+<http://www.jstor.org/stable/10.7312/huds19466>
+
+Mones, B (2004). "La inclusión de las mujeres y la igualdad de género:
+nuevos desafíos para la modernización del Estado" en IX Congreso
+Internacional del CLAD sobre la Reforma del Estado y de la
+Administración Pública, Madrid, España, 2 -- 5 Nov. 2004
+<http://americalatinagenera.org/newsite/images/cdr-documents/publicaciones/doc_444_0050134.pdf>
+
+Mukhopadhyay, M (2007). Justicia de género, ciudadanía y desarrollo.
+Centro Internacional de Investigaciones para el desarrollo. Tercera
+Edición, India, New Delhi.
+<https://idl-bnc-idrc.dspacedirect.org/handle/10625/34957>
+
+Sahui, M (2015). La igualdad en la medida de la calidad democrática -
+Una revisión crítica de la propuesta de Leonardo Morlino. Revista
+Dossier - 7 de mayo de 2015: pp. 33 - 55
+<https://www.redalyc.org/pdf/421/42146505010.pdf>
+
+The WomanStatsProject (2019). Base de Datos sobre la situación de la
+mujer 2019. Brigham Young College, Utah. Revisado: 21 de agosto 2021
+<https://www.womanstats.org/new/>
+
+Wood, Reed, and Mark Ramirez (2018). "Exploring the Microfoundations of
+the Gender Equality Peace Hypothesis." International Studies Review 20,
+no. 3: 345--367. <https://doi.org> /10.1093/isr/vix016.
+
+World Economic Forum (2020). Global Gender Gap Report : "Informe Final
+de la brecha de desigualdad de género en el mundo 2020". Revisado: 3 de
+setiembre 2021
+<https://www.weforum.org/reports/gender-gap-2020-report-100-years-pay-equality>
